@@ -11,6 +11,8 @@ As for may 2024 I've implemented only these functions:<br>
     - [Testing](#testing)
     - [Use as library](#use-as-library)
   - [Linux](#linux)
+    - [Testing on Linux](#testing-on-linux)
+    - [Use as library](#use-as-library-on-linux)
   - [Docker](#docker)
 - [Introduction to Assembly x64/x86](#introduction-to-assembly-x64x86)
   - [Sections](#sections)
@@ -42,8 +44,32 @@ int main(){
 }
 ```
 ### Linux
+Everything is the same as in MacOS, because Makefile does it for you. 
+```shell
+make
+```
+#### Testing on Linux
+```shell
+make test
+```
+#### Use as library on Linux
+Before including this dynamic lib to your C file, please make sure that in Makefile you added new target for compilation.
+```c
+#include "libasm.h"
+
+int main(){
+    char *str = "Hello!";
+    size_t sz = ft_strlen(str);
+    printf("%zu\n", sz);
+    return 0;
+}
+```
 
 ### Docker
+By default containers image is `ubuntu:latest`
+```shell
+make containerized
+```
 
 ## Introduction to Assembly x64/x86
 ### Sections

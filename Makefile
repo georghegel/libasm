@@ -5,8 +5,16 @@ SRCS 	=		./sources/ft_strlen.s \
 					./sources/ft_read.s \
 					./sources/ft_write.s
 
-FLAGS = 	-f macho64
-LINUX_FLAGS = -f elf64
+UNAME := $(shell uname)
+
+ifeq ($(UNAME), Linux)
+ FLAGS = -f elf64
+endif
+
+ifeq ($(UNAME), Darwin)
+ FLAGS = -f macho64
+endif
+
 CFLAGS = -Wall -Wextra -Werror
 CC = nasm
 
