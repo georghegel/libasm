@@ -44,6 +44,10 @@ test: all
 %.o: %.s
 	${CC} ${FLAGS} $<
 
+containerized:
+	docker build -t myasm .
+	docker run myasm
+
 clean:
 	rm -rf ${OBJS}
 

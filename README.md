@@ -66,7 +66,7 @@ int main(){
 ```
 
 ### Docker
-By default containers image is `ubuntu:latest`
+By default container's image is `ubuntu:latest`
 ```shell
 make containerized
 ```
