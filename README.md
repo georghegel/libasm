@@ -44,6 +44,7 @@ int main(){
 }
 ```
 ### Linux
+*Not working now. Because Linux-typed OS has another asm syntax. Will add asm later for Linux*<br>
 Everything is the same as in MacOS, because Makefile does it for you. 
 ```shell
 make
@@ -53,7 +54,6 @@ make
 make test
 ```
 #### Use as library on Linux
-*Not working now. Because Linux-typed OS has another asm syntax. Will add asm later for Linux*
 Before including this dynamic lib to your C file, please make sure that in Makefile you added new target for compilation.
 ```c
 #include "libasm.h"
@@ -67,7 +67,7 @@ int main(){
 ```
 
 ### Docker
-*Not working now. Because Linux-typed OS has another asm syntax. Will add asm later for Linux*
+*Not working now. Because Linux-typed OS has another asm syntax. Will add asm later for Linux*<br>
 By default container's image is `ubuntu:latest`
 ```shell
 make containerized
